@@ -1,0 +1,38 @@
+React - https://legacy.reactjs.org/docs/getting-started.html
+Tialwind - https://tailwindcss.com/
+         - https://tailwindcss.com/docs/installation
+React-slick - https://react-slick.neostack.com/        
+NPM Axios - https://www.npmjs.com/package/axios
+Axios - https://axios-http.com/docs/example
+HeadlessUI - https://headlessui.com/react/popover#installation
+React-Icons - https://react-icons.github.io/react-icons/
+Tailwind Shades - https://www.tailwindshades.com/#color=0%2C0%2C0&step-up=11&step-down=0&hue-shift=-69&name=black&base-stop=5&v=1&overrides=e30%3D
+
+
+Building an Appln
+1. npx create-react-app .
+2. npm start
+3. npm install -D tailwindcss postcss autoprefixer
+4. npx tailwindcss init
+5. npm i babel (optional pkg)
+6. npm install react-slick
+7. npm install slick-carousel
+8. npm i axios
+9. npm install @headlessui/react
+10. npm install react-icons
+11. npm i react-router-dom
+
+
+
+Install Prettier Extension:
+1. ctrl + shift + p
+    >> Format Document (Configure Pop-Up (Ok))
+2 ctrl + ,
+    >> Editor: Format On Save    
+
+
+
+
+//notes for 25th
+Tialwind.config => barkground
+index.css => text-grey-800 
