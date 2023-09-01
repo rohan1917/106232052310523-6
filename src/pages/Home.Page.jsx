@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Layout HOC
 import DefaultLayoutHoc from "../layout/Default.layout";
@@ -8,10 +8,21 @@ import PosterSlider from "../components/PosterSlider/PosterSlider.Component";
 import HeroCarousel from "../components/HeroCarousel/HeroCarousel.Component";
 import EnterainmentCardSlider from "../components/Entertainment/EnterainmentCard.Component";
 
+// axios
+import axios from "axios";
+
 const HomePage = () => {
     const [recommendedMovies, setRecommendedMovies] = useState([]);
     const [premierMovies, setPremierMovies] = useState([]);
     const [onlineStreamEvents, setOnlineStreamEvents] = useState([]);
+
+    useEffect(()=> {
+        const requestTopRatedMovies = async () => {
+            const getTopRatedMovies = await axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=c54ab2f18bdf2fcbf4283c5aa5ab488c');
+            setRecommendedMovies(getTopRatedMovies.data.results);
+        };
+        requestTopRatedMovies();
+    }, [])
 
         return(
            <>
@@ -23,7 +34,7 @@ const HomePage = () => {
             <div className="container mx-auto px-4 md:px-12 my-8">
                 <PosterSlider 
                 title="Recommended Movies"
-                subject="List of recommended movies"
+                subtitle="List of recommended movies"
                 posters={recommendedMovies}
                 isDark={false}
                 />
@@ -36,7 +47,7 @@ const HomePage = () => {
                 </div>
                 <PosterSlider 
                 title="Premiers"
-                subject="Brand new release every Friday"
+                subtitle="Brand new release every Friday"
                 posters={premierMovies}
                 isDark={true}
                 />
@@ -45,7 +56,7 @@ const HomePage = () => {
             <div className="container mx-auto px-4 md:px-12 my-8 flex flex-col gap-3">
                  <PosterSlider 
                 title="Online Streaming Events"
-                subject="Online Streaming Events"
+                subtitle="Online Streaming Events"
                 posters={onlineStreamEvents}
                 isDark={false}
                 />
