@@ -39,3 +39,34 @@ Components
 9. PosterSlider
     PosterSlider.Component.jsx                
     
+
+
+
+3-10 => 7 days
+
+2 days movie pg
+1 day payment modal
+1 day revision
+2-3 days devops
+2-3 days carrer assistance
+
+
+
+
+DevOps & CICD (Docker, Kubernetes)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
